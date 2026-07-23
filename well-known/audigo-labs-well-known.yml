@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of https://www.audigolabs.com/.well-known/*
+host: https://www.audigolabs.com
+note: >-
+  audigolabs.com is a Shopify-hosted storefront. The documents below are served
+  by the Shopify commerce platform at Audigo's own host: the OpenID Connect /
+  OAuth authorization-server discovery documents point at Shopify Customer
+  Accounts, and /.well-known/ucp is the Universal Commerce Protocol (ucp.dev)
+  agent-commerce merchant profile advertising a live MCP endpoint. Audigo Labs
+  publishes no first-party developer API of its own.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 200
+  file: audigo-labs-openid-configuration.json
+  kind: openid-connect-discovery
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: audigo-labs-oauth-authorization-server.json
+  kind: rfc8414-authorization-server
+- path: /.well-known/ucp
+  status: 200
+  file: audigo-labs-ucp.json
+  kind: universal-commerce-protocol-profile
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

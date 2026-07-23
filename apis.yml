@@ -1,8 +1,32 @@
 aid: audigo-labs
 name: Audigo Labs
-description: Audigo Labs is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Audigo Labs is a San Francisco consumer audio company, founded in 2019 by
+  former Tesla engineer and drummer Armen Nazarian, that makes a pocket-sized
+  mobile recording studio: wireless smart microphones paired with the Audigo
+  iOS and Android app for multi-track recording, multi-mic capture, automatic
+  clip correction, editing, remote collaboration, live streaming, and sharing.
+  The company sells its hardware and Studio subscription plans through a
+  Shopify-hosted storefront at audigolabs.com and supports customers through a
+  Zendesk help center. Audigo publishes no first-party developer API; its
+  public agent-facing surface is the Shopify commerce platform — a Universal
+  Commerce Protocol (UCP) merchant profile with a live buy-for-me MCP endpoint,
+  OpenID Connect / OAuth authorization-server discovery for Shopify Customer
+  Accounts, and an /llms.txt agent-shopping guide. Added to the API Evangelist
+  network as a Techstars portfolio company.
 url: https://raw.githubusercontent.com/api-evangelist/audigo-labs/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://www.audigolabs.com/cdn/shop/files/Copy_of_AU03key22_00_03_1.1_44408b9c-011a-47de-9e16-3058f911a707_1200x.png?v=1750185889
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,9 +35,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Audio
+- Music
+- Recording
+- Consumer Hardware
+- Mobile App
+- Microphones
+- Content Creation
+- Agentic Commerce
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +55,41 @@ maintainers:
 common:
 - type: Website
   url: https://audigolabs.com/
+- type: About
+  url: https://www.audigolabs.com/pages/about
+- type: Blog
+  url: https://www.audigolabs.com/blogs/blog
+- type: Support
+  url: https://support.audigolabs.com/hc/en-us
+- type: HelpCenter
+  url: https://support.audigolabs.com/hc/en-us
+- type: GettingStarted
+  url: https://www.audigolabs.com/pages/user-guide
+- type: Pricing
+  url: https://www.audigolabs.com/pages/compare-features
+- type: SignUp
+  url: https://www.audigolabs.com/account/register
+- type: Login
+  url: https://www.audigolabs.com/account/login
+- type: TermsOfService
+  url: https://www.audigolabs.com/policies/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.audigolabs.com/policies/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/AudigoLabs
+- type: MCPServer
+  name: Audigo UCP commerce MCP server
+  url: mcp/audigo-labs-mcp.yml
+- type: WellKnown
+  url: well-known/audigo-labs-well-known.yml
+- type: APICatalog
+  url: well-known/audigo-labs-ucp.json
+- type: LLMsTxt
+  url: llms/audigo-labs-llms.txt
+- type: DomainSecurity
+  url: security/audigo-labs-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
