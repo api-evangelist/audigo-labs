@@ -3,14 +3,12 @@ method: searched
 status: published
 source: https://www.audigolabs.com/llms.txt
 discovery: https://www.audigolabs.com/.well-known/ucp
-note: >-
-  Audigo Labs publishes no first-party developer API. Its Shopify storefront
-  implements the Universal Commerce Protocol (UCP, https://ucp.dev) for
-  agent-driven commerce and advertises a live hosted MCP server for buying
-  agents. The endpoint is the platform (Shopify) UCP shopping service exposed at
-  Audigo's own host; tools/list requires an agent-profile handshake. The tool
-  surface below is documented verbatim in the store's /llms.txt "Typical Agent
-  Flow". This is a commerce (buy-for-me) MCP server, not a developer API.
+note: Audigo Labs publishes no first-party developer API. Its Shopify storefront implements the Universal
+  Commerce Protocol (UCP, https://ucp.dev) for agent-driven commerce and advertises a live hosted MCP
+  server for buying agents. The endpoint is the platform (Shopify) UCP shopping service exposed at Audigo's
+  own host; tools/list requires an agent-profile handshake. The tool surface below is documented verbatim
+  in the store's /llms.txt "Typical Agent Flow". This is a commerce (buy-for-me) MCP server, not a developer
+  API.
 server:
   name: audigo-ucp-shopping
   protocol: universal-commerce-protocol
@@ -38,3 +36,11 @@ tools:
 - name: complete_checkout
   description: Finalize the purchase; the buyer must approve payment.
   source: llms.txt
+deployment:
+  mode: remote
+  endpoint: https://www.audigolabs.com/api/ucp/mcp
+  verified: probed
+  probe: live
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
